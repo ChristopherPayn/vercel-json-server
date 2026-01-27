@@ -1,0 +1,9 @@
+{
+    "accounts": [
+        { "accountNumber": "1234", "name": "Scooter McTooter" },
+        { "accountNumber": "9876", "name": "Quentin Le Fentin" }
+    ],
+    "transactions": [
+        { "id": "ab56", "amount": 30, "timestamp": "some_dreadful_timestamp_format" }
+    ]
+}
