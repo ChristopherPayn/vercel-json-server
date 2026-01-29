@@ -1,5 +1,6 @@
 import express from 'express';
 import { readFile } from 'fs';
+import path from 'path';
 
 const app = express();
 const PORT = 3000;
@@ -9,7 +10,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/accounts', (req, res) => {
-    readFile('./db.json', (err, data) => {
+    let dbPath = path.join(process.cwd(), 'db.json');
+    readFile(dbPath, (err, data) => {
         if (err) {
             throw err;
         };
@@ -21,7 +23,8 @@ app.get('/accounts', (req, res) => {
 });
 
 app.get('/accounts/:accountNumber', (req, res) => {
-    readFile('./db.json', (err, data) => {
+    let dbPath = path.join(process.cwd(), 'db.json');
+    readFile(dbPath, (err, data) => {
         if (err) {
             throw err;
         };
