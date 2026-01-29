@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/accounts', (req, res) => {
-    readFile('db.json', (err, data) => {
+    readFile('./db.json', (err, data) => {
         if (err) {
             throw err;
         };
@@ -21,7 +21,7 @@ app.get('/accounts', (req, res) => {
 });
 
 app.get('/accounts/:accountNumber', (req, res) => {
-    readFile('db.json', (err, data) => {
+    readFile('./db.json', (err, data) => {
         if (err) {
             throw err;
         };
